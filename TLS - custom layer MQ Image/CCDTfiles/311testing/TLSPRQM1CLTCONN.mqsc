@@ -1,0 +1,10 @@
+DEFINE CHANNEL(TLSPRQM1.SVRCONN) +
+	CHLTYPE(CLNTCONN) + 
+	TRPTYPE(TCP) +
+ 	CONNAME('icp-console.apps.ocp.cloudnativekube.com(32602)') +
+	CERTLABL('ibmmqarnold') +
+	QMNAME(TLSPRQM1) +
+    SSLCIPH(ANY_TLS12) +
+	REPLACE
+
+
