@@ -1,0 +1,36 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: tls-tlsprqm1p
+  namespace: mq
+  selfLink: /apis/route.openshift.io/v1/namespaces/mq/routes/tls-tlsprqm1p
+  uid: b269c229-2537-11ea-befc-0a580a82008f
+  resourceVersion: '6926208'
+  creationTimestamp: '2019-12-23T03:52:53Z'
+  labels:
+    app: ibm-mq
+    chart: ibm-mqadvanced-server-integration-prod
+    heritage: Tiller
+    release: tlsprqm1p
+spec:
+  host: tlsprqm12e-svrconn.chl.mq.ibm.com
+  subdomain: ''
+  to:
+    kind: Service
+    name: tlsprqm1p-ibm-mq
+    weight: 100
+  port:
+    targetPort: 1414
+  tls:
+    termination: passthrough
+  wildcardPolicy: None
+status:
+  ingress:
+    - host: tlsprqm12e-svrconn.chl.mq.ibm.com
+      routerName: default
+      conditions:
+        - type: Admitted
+          status: 'True'
+          lastTransitionTime: '2019-12-23T03:52:53Z'
+      wildcardPolicy: None
+      routerCanonicalHostname: apps.mq.dev.###mbr.com
