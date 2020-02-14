@@ -1,0 +1,8 @@
+DEFINE CHANNEL(TLSPRQM1.SVRCONN) +
+	CHLTYPE(CLNTCONN) + 
+	TRPTYPE(TCP) +
+	CONNAME('tlsprqm1p-ibm-mq-qm-mq.apps.mycluster.ocp4.cloudnativekube.com(443)') +
+	CERTLABL('ibmmqarnold') +
+	QMNAME(TLSPRQM1) +
+    SSLCIPH(ANY_TLS12) +
+	REPLACE
